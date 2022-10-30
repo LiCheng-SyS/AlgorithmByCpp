@@ -38,11 +38,11 @@ public:
     static  void euler6();
 public:
     static  int euler8();
-public:
-private:
-    static int   num1[30][30];
-    static int ans1;
-    static  void euler11();
+//public:
+//private:
+//    static int   num1[30][30];
+//    static int ans1;
+//    static  void euler11();
 public:
     static  void euler13();
 public:

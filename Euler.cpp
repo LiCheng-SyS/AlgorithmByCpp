@@ -497,37 +497,37 @@ int Euler:: euler8()
 
 
 //阵中，有四个呈对角线排列的数被标记为红色。	方向数组
-void Euler:: euler11()
-{
-    int dirx[4] = { -1,0,1,1 };
-    int diry[4] = { 1,1,1,0 };
-    for (int i = 5; i < 25; ++i)
-    {
-        for (int j = 5; j < 25; ++j)
-        {
-            cin >> num1[i][j];
-        }
-    }
-    for (int i = 0; i < 25; ++i)
-    {
-        for (int j = 0; j < 25; ++i)
-        {
-            for (int k = 0; k < 4; ++k)
-            {
-                int temp = num1[i][j];
-                for (int l = 0; l <= 3; ++l)
-                {
-                    int x = i + l * dirx[k];
-                    int y = j + l * diry[k];
-                    temp *= num1[x][y];
-                }
-                ans1 = max(ans1, temp);
+//void Euler:: euler11()
+//{
+//    int dirx[4] = { -1,0,1,1 };
+//    int diry[4] = { 1,1,1,0 };
+//    for (int i = 5; i < 25; ++i)
+//    {
+//        for (int j = 5; j < 25; ++j)
+//        {
+//            cin >> num1[i][j];
+//        }
+//    }
+//    for (int i = 0; i < 25; ++i)
+//    {
+//        for (int j = 0; j < 25; ++i)
+//        {
+//            for (int k = 0; k < 4; ++k)
+//            {
+//                int temp = num1[i][j];
+//                for (int l = 0; l <= 3; ++l)
+//                {
+//                    int x = i + l * dirx[k];
+//                    int y = j + l * diry[k];
+//                    temp *= num1[x][y];
+//                }
+//                ans1 = max(ans1, temp);
 
-            }
-        }
-    }
-    cout << ans1 << endl;
-}
+//            }
+//        }
+//    }
+//    cout << ans1 << endl;
+//}
 
 
 
