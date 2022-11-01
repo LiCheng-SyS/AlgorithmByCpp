@@ -7,7 +7,7 @@ using namespace std;
 
 
 bool is_prime(int n){
-    if(n==1)return false;
+    if(n==1)return false;//取反为和数true 为质数
     else
         {
         for(int i=2;i<=sqrt(n);i++)
@@ -35,8 +35,4 @@ long long OJ::fib() {
         }
       return fin;
  }
-
-
-
-
 
