@@ -5,8 +5,10 @@ CONFIG -= qt
 HEADERS += \
        Euler.h \
        OJ.h \
+       Leetcode.h\
        main.h
 SOURCES += \
         Euler.cpp \
         OJ.cpp \
+        Leetcode.cpp\
         main.cpp
