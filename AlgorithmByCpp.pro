@@ -6,8 +6,9 @@ HEADERS += \
        Euler.h \
        OJ.h \
        Leetcode.h\
+
 SOURCES += \
-        Euler.cpp \
-        OJ.cpp \
-        Leetcode.cpp\
-        main.cpp
+    Euler.cpp \
+    OJ.cpp \
+    Leetcode.cpp \
+    main.cpp
