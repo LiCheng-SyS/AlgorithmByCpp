@@ -180,4 +180,53 @@ int Leetcode::Length_of_Last_Word()
 	return  lengthOfLastWord("Hello World");
 }
 
+
+int  Leetcode::SingNumber_implement(vector<int> &nums){
+
+    int ans =0;
+    for(int i=0;i<nums.size();i++){
+        //cout << nums[i]<< " first" << ans << endl;
+        ans ^=nums[i];
+        //cout << nums[i]<< "last" << ans << endl;
+    }
+    return ans;
+}
+
+
+
+
+//位运算
+//  0 ^ x =x   基数会被返还
+//  如果异或为  基数 则返回 本身
+//  x ^ x =0   由此可知  你偶数^偶数==0
+int Leetcode::SingNumber(){
+    int valarr[]={1,2,2,1,4,4,8};
+    vector<int>setArr(valarr,valarr+7);
+    return   SingNumber_implement(setArr);
+}
+
+
+//对于任何一个数 & 1，因为1的二进制是1，在它的补码中，除了最后一位为1，其它全部为0，
+//前面提到，按位与运算&只有当两个数都为1时结果才是1，因此，任何一个数与1相与，只有最低位可能为1，
+//因此最终的结果只有0和1两种情况，而且结果取决于另外那个数二进制中的最后一位（若为1，最终结果便为1，若为0，结果便是0）
+
+
+//正常  x % 2==0 // 负数会出问题  //找错用下 gdb
+long long Leetcode::IsCardinal(){
+    int cnt=0;
+    int valarr[]={1,2,3,4,5,6,-7,8,9,10};
+    vector<int>setArr(valarr,valarr+10);
+    for(int i =1;i<setArr.size();i++){
+            if(setArr[i] & 1 !=0){
+                cnt++;
+            }
+    }
+    return cnt;
+}
+
+
+
+
+
+
  
