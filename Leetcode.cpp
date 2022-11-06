@@ -195,10 +195,9 @@ int  Leetcode::SingNumber_implement(vector<int> &nums){
 
 
 
-//位运算
+//位运算   不用第三个变量 来交换两个变量  ---别乱用 容易死
 //  0 ^ x =x   基数会被返还
-//  如果异或为  基数 则返回 本身
-//  x ^ x =0   由此可知  你偶数^偶数==0
+//  x ^ x =0
 int Leetcode::SingNumber(){
     int valarr[]={1,2,2,1,4,4,8};
     vector<int>setArr(valarr,valarr+7);

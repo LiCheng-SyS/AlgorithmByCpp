@@ -21,4 +21,5 @@ public:
     static int SingNumber();
 public:   //题目判断奇偶数  数据范围 10^ 10 次方   int 2 * 10^9    应该是用long long
     static long long  IsCardinal();
+
 };
