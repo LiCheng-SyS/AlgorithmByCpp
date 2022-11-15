@@ -543,9 +543,10 @@ int OJ::recursive_240(){
 
 
 
-int func235_n,func235_num[15];
-void printf235(int cnt ){
-    for(int i=1;i<=cnt;i++){
+int func235_n,func235_num[15],deep=1;
+//这个deep 是选中的第几个数
+void printf235(){
+    for(int i=1;i<=deep;i++){
         if(i!=1){
             cout << "";
         }
@@ -553,21 +554,27 @@ void printf235(int cnt ){
     }
     cout << endl;
 }
-void func_235 (int s,int deep){
+void func_235 (int s){
+
+     //cout  <<"fisrt deep"<< deep << "fisrt " << s<< endl;
     for(int i=s;i<=func235_n;i++){
-         //从1开始?
-        func235_num[deep]=i;
-       //cout << func235_num[deep]<< endl;
-        printf235(deep);
-        func_235(i+1,deep+1);
+         //从1开始
+        //cout << "i:" << i<< "deep" <<deep<<  endl;
+        func235_num[deep]=i;//这里是在存3
+     //   cout << func235_num[i]<<endl;
+        //cout << i <<"deep 下标数组:"<< deep<< endl;
+        printf235();
+        deep++;
+        func_235(i+1);
+        deep--;
     }
 }
 
 int OJ::recursive_235(){
 
-    cin >> func235_n ;
+     func235_n =3;
     //选数的范围
 
-    func_235(1,1);
+    func_235(1);
     return 1;
 }
