@@ -579,9 +579,9 @@ int OJ::recursive_235(){
     return 1;
 }
 
-int func_236_num[15],funcve_236_deep;
+int func_236_num[15],funcve_236_deep,func_236_n;
 void printf236(){
-    for(int i=1;i<=funcve_236_deep;i++){
+    for(int i=1;i<=func_236_n;i++){
         if(i!=1){
             cout << "";
         }
@@ -607,8 +607,45 @@ void func_236(int s,int left){
 
 int OJ::recursive_236()
 {
-   int n=0 ,m=0;
-   cin >> n >> m;
+   int m=0;
+   cin >> func_236_n >> m;
    func_236(1,m);
+   return 1;
+}
+
+
+
+int func_237_n,func_237_num[15],func_237_mark[15],func_237_deep=1;
+void func_237_print(){
+    for(int i=1;i<=func_237_n;i++){
+        if(i!=1){
+            cout << "";
+        }
+        cout << func_237_num[i];
+    }
+    cout << endl;
+}
+void func_237(){
+   if(func_237_deep==n+1){
+        func_237_print();
+        return 0;
+   }
+   for(int i=1;i<=n;i++){
+        if(func_237_mark[i]==0){
+              func_237_num[func_237_deep]=i;
+              func_237_mark[i]=1;
+              func_237_deep++;
+              func_237();
+              func_237_deep--;
+              func_237_mark[i]=0;
+        }
+   }
+}
+
+int OJ::recursive_237()
+{
+
+   cin >> func_237_n;
+   func_237();
    return 1;
 }
