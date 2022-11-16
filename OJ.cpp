@@ -578,3 +578,37 @@ int OJ::recursive_235(){
     func_235(1);
     return 1;
 }
+
+int func_236_num[15],funcve_236_deep;
+void printf236(){
+    for(int i=1;i<=funcve_236_deep;i++){
+        if(i!=1){
+            cout << "";
+        }
+        cout << func_236_num[i];
+    }
+    cout << endl;
+}
+
+void func_236(int s,int left){
+
+    if(left==0){
+        printf236();
+        return;
+    }
+    for(int i=s;i<=n;i++){
+        func_236_num[funcve_236_deep]=i;
+        funcve_236_deep++;
+         func_236(i++,left-1);
+        funcve_236_deep--;
+    }
+}
+
+
+int OJ::recursive_236()
+{
+   int n=0 ,m=0;
+   cin >> n >> m;
+   func_236(1,m);
+   return 1;
+}

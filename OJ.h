@@ -43,6 +43,8 @@ public:
      static int recursive_240();
 public:
      static int recursive_235();
+public:
+     static int recursive_236();
 };
 
 
